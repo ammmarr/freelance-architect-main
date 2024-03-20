@@ -10,21 +10,22 @@ import ReadInsightSection from "../components/readInsightsSection/ReadInsightSec
 import StartWithIdeaSection from "../components/startWithIdeaSection/StartWithIdeaSection";
 import useGetData from "../hooks/useGetData";
 import transition from "../transitions/PageTransitions";
+import { data } from "./Projects";
 
 const Home = () => {
-  const { data, loading, error } = useGetData(
-    `${import.meta.env.VITE_DOMAIN}/api/projects?populate=*`
-  );
-  const maininfoData = useGetData(
-    `${import.meta.env.VITE_DOMAIN}/api/main-info?populate=*`
-  );
+  // const { data, loading, error } = useGetData(
+  //   `${import.meta.env.VITE_DOMAIN}/api/projects?populate=*`
+  // );
+  // const maininfoData = useGetData(
+  //   `${import.meta.env.VITE_DOMAIN}/api/main-info?populate=*`
+  // );
 
   return (
     <div>
       <HeroCard />
       <ProjectsSectionHome data={data} />
       <StartWithIdeaSection />
-      <CeoSection data={maininfoData.data} />
+      <CeoSection />
       <AccordionSection />
       <ReadInsightSection data={data} />
       <QuotesCarousel />

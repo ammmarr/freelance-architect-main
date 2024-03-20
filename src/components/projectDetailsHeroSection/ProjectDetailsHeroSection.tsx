@@ -9,7 +9,14 @@ const ProjectDetailsHeroSection = ({ data }: any) => {
     : null;
   const projectVideos = data.project_videos.data
     ? data.project_videos.data.map((each: any) => (
-        <iframe width={"100%"} height={600} src={`${each.attributes.url}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          width={"100%"}
+          height={600}
+          src={`${each.attributes.url}`}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
       ))
     : null;
 

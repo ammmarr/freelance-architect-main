@@ -1,7 +1,5 @@
-import React from "react";
-import style from "./index.module.scss";
-import demo from "../../assets/sliderImg2.jpg";
 import { useNavigate } from "react-router-dom";
+import style from "./index.module.scss";
 const ProjectCardForProjectsPage = ({ data, number }: any) => {
   const navigate = useNavigate();
   const coverImage = `${data.attributes.main_thumbnail_image.data.attributes.url}`;

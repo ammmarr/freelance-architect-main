@@ -34,20 +34,22 @@ export const NavBar = () => {
   }, [lastScrollY]);
   const blurred = lastScrollY > 250 ? style.blurred : style.none;
   return (
-    <nav
-      className={
-        show
-          ? `${style.container} ${style.mainNavShow} ${blurred}`
-          : `${style.container} ${style.mainNavHide}`
-      }
-    >
-      <div className={style.logoContainer}>
-        <img src={logo} alt="" />
-      </div>
-      <div className={style.mainItemsWithUnderLine}>
-        <Link to={"/"}>TRAUM ARCHITECTURE</Link>
-        <Link to="/projects">PROJECTS</Link>
-      </div>
-    </nav>
+    <>
+      <nav
+        className={
+          show
+            ? `${style.container} ${style.mainNavShow} ${blurred}`
+            : `${style.container} ${style.mainNavHide}`
+        }
+      >
+        <div className={style.logoContainer}>
+          <img src={logo} alt="" />
+        </div>
+        <div className={style.mainItemsWithUnderLine}>
+          <Link to={"/"}>TRAUM ARCHITECTURE</Link>
+          <Link to="/projects">PROJECTS</Link>
+        </div>
+      </nav>
+    </>
   );
 };
