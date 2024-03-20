@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+  min-height: 60vh;
+  padding: 0 2%;
+  display: flex;
+  gap: 20px;
+  background-color: black;
+  margin: 10vh 0;
+
+  .left {
+    flex: 1.5;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .right {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+  .left {
+    width: 100% !important;
+    height: 40vh;
+  }
+  .right {
+    height: fit-content !important;
+    flex: none !important;
+  }
+}

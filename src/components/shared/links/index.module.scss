@@ -1,0 +1,20 @@
+.container {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  a {
+    color: var(--yellow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      color: rgb(215, 194, 97);
+    }
+  }
+  .divider {
+    width: 30px;
+    height: 1px;
+    background-color: var(--yellow);
+  }
+}

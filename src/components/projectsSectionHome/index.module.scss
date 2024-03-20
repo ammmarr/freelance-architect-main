@@ -1,0 +1,7 @@
+.projectsRow {
+  min-height: 30vh;
+  overflow: hidden;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

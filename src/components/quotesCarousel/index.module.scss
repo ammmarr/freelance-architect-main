@@ -1,0 +1,81 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../../assets/ling_bg.png);
+  .wrapper {
+    width: 50%;
+    height: fit-content;
+    position: relative;
+    .singleItemContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 30px;
+      h3 {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 45px;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: var(--yellow);
+      }
+      P {
+        margin: 30px 0;
+        text-align: center;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+      }
+    }
+    .iconContainer {
+      color: var(--yellow);
+      path {
+        color: var(--yellow);
+      }
+      width: 30px;
+      font-size: 40px;
+      transform: scale(2) translateY(-50%);
+      transition: all ease 0.3s;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      &:hover {
+        transform: scale(1.1) translateX(10%) scale(2);
+      }
+    }
+    .transformLeft {
+      transform: rotate(180deg) scale(2);
+      transition: all ease 0.3s;
+      left: -15%;
+      &:hover {
+        transform: scale(1.1) translateX(-10%) scale(2) rotate(180deg);
+      }
+    }
+    .transformRight {
+      transform: scale(2);
+      transition: all ease 0.3s;
+      right: -15%;
+      &:hover {
+        transform: scale(1.1) translateX(10%) scale(2);
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .wrapper {
+    width: 85% !important;
+    h3 {
+      font-size: 20px !important;
+    }
+  }
+  .transformLeft {
+    left: 0% !important;
+  }
+  .transformRight {
+    right: 0% !important;
+  }
+}
