@@ -33,17 +33,17 @@ const ProjectDetailsHeroSection = ({ data }: any) => {
           <h3>{data.title} </h3>
           <div className={style.info}>
             <h6>
-              <span>ARCHITECTS :</span>
+              <span>ARCHITECT :</span>
               {data.architects}
             </h6>
             <h6>
               <span>LOCATION : </span>
               {data.location}
             </h6>
-            <h6>
+            {/* <h6>
               <span>CATEGORY : </span>
               {data.category}
-            </h6>
+            </h6> */}
           </div>
         </div>
         <div
